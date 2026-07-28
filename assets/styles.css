@@ -1,0 +1,265 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f7fb;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-strong: #ffffff;
+  --text: #172033;
+  --muted: #5e6a7d;
+  --line: #dce2ec;
+  --brand: #ee334e;
+  --brand-dark: #b81935;
+  --accent: #ffcc36;
+  --shadow: 0 18px 50px rgba(42, 54, 83, 0.12);
+  font-family:
+    Inter,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at 12% 0%,
+      rgba(255, 204, 54, 0.26),
+      transparent 31rem
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(238, 51, 78, 0.18),
+      transparent 34rem
+    ),
+    var(--bg);
+  line-height: 1.75;
+}
+
+a {
+  color: var(--brand-dark);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.shell {
+  width: min(100% - 32px, 920px);
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.hero,
+.document,
+.card {
+  border: 1px solid rgba(220, 226, 236, 0.84);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 6vw, 56px);
+}
+
+.hero::after {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  right: -68px;
+  bottom: -88px;
+  border: 26px solid rgba(238, 51, 78, 0.12);
+  border-radius: 50%;
+  content: "";
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 4rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 2.25rem 0 0.75rem;
+  font-size: clamp(1.28rem, 3vw, 1.65rem);
+}
+
+h3 {
+  margin: 1.5rem 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+p,
+ul {
+  margin-top: 0.65rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.lead {
+  max-width: 650px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+}
+
+.actions,
+.card-grid,
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.actions {
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  background: var(--brand);
+  color: #ffffff;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.button.secondary {
+  border-color: var(--line);
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.card-grid {
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  padding: 22px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.document {
+  margin-top: 20px;
+  padding: clamp(24px, 6vw, 52px);
+}
+
+.meta {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lang-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+}
+
+.lang-nav a {
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  text-decoration: none;
+}
+
+.notice {
+  margin: 20px 0;
+  padding: 16px 18px;
+  border-left: 4px solid var(--accent);
+  border-radius: 4px 14px 14px 4px;
+  background: rgba(255, 204, 54, 0.13);
+}
+
+.language-section + .language-section {
+  margin-top: 48px;
+  padding-top: 38px;
+  border-top: 2px solid var(--line);
+}
+
+.footer {
+  padding: 28px 8px 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+code {
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+  background: rgba(94, 106, 125, 0.12);
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10131a;
+    --surface: rgba(27, 32, 43, 0.94);
+    --surface-strong: #232a38;
+    --text: #f5f7fb;
+    --muted: #b1bbca;
+    --line: #3a4353;
+    --brand: #ff4b64;
+    --brand-dark: #ff8797;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 520px) {
+  .shell {
+    width: min(100% - 20px, 920px);
+    padding-top: 18px;
+  }
+
+  .hero,
+  .document,
+  .card {
+    border-radius: 18px;
+  }
+}
