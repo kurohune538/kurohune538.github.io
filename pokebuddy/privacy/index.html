@@ -27,7 +27,7 @@
       <article class="document">
         <div class="meta">
           <span>制定日: 2026年7月28日</span>
-          <span>最終更新日: 2026年7月28日</span>
+          <span>最終更新日: 2026年9月15日</span>
           <span>運営者: PokeBuddy developer (Yamico)</span>
         </div>
 
@@ -50,7 +50,10 @@
           <h3>利用者が作成・登録する情報</h3>
           <ul>
             <li>
-              デッキ名、カード構成、所持カード、調整用カードなどのデッキ・コレクション情報
+              デッキ名、カード構成、デッキの変更履歴、所持カード、調整用カードなどのデッキ・コレクション情報
+            </li>
+            <li>
+              所持カードごとに利用者が任意で登録する状態、仕上げ、鑑定情報、取得価格と通貨、自己評価、メモ
             </li>
             <li>
               対戦結果、対戦相手のデッキ種別、メモ、バトルログなどの利用記録
@@ -79,7 +82,7 @@
             </li>
             <li>広告同意の状態、非パーソナライズ広告の設定</li>
             <li>
-              購入商品、購入・購読状態、ストアの取引識別子および本アプリのユーザーID
+              購入商品、購入・購読の状態（無料体験の対象可否と開始、更新、解約予約、返金、失効を含みます）、ストアの取引識別子、購入時の価格と通貨、本アプリのユーザーID
             </li>
           </ul>
 
@@ -95,6 +98,10 @@
           <ul>
             <li>本アプリの提供、ログイン、端末間同期、バックアップ</li>
             <li>デッキ、対戦、コレクション、CPU対戦、通知、購入機能の提供</li>
+            <li>
+              有料プラン（PokeBuddyプラス）の権利判定と、自分の戦績分析など有料機能の提供
+            </li>
+            <li>購入・購読状況の集計（無料体験からの転換率、更新率、返金率など）</li>
             <li>広告の表示、同意管理、広告の効果測定、不正利用防止</li>
             <li>不具合解析、性能改善、セキュリティ確保、サポート対応</li>
             <li>法令、ストア規約および利用条件への対応</li>
@@ -114,7 +121,12 @@
             <li>
               <strong>Google AdMob</strong>: 広告配信、測定、不正防止、同意管理
             </li>
-            <li><strong>RevenueCat</strong>: 購入・購読状態の管理</li>
+            <li>
+              <strong>RevenueCat</strong>（RevenueCat, Inc.、米国）:
+              購入・購読状態の管理。購入・購読情報と本アプリのユーザーIDを同社へ送信し、購読状態の判定と集計に利用します。同社の取扱いは
+              <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCatのプライバシーポリシー</a>
+              をご覧ください。
+            </li>
             <li>
               <strong>Apple / Google</strong>:
               サインイン、アプリ配信、アプリ内購入
@@ -134,6 +146,7 @@
             原則30日以内に削除または匿名化します。バックアップおよび第三者サービス上のデータは、
             各サービスの削除サイクルに従い、完全な消去まで最大180日程度を要する場合があります。
             購入記録はApple、Google、RevenueCatまたは法令上の要件により、より長く保持される場合があります。
+            当方が保持する購入・購読のイベント記録は、返金対応、不正防止および会計上の要件のため、アカウント削除後も本アプリのユーザーIDとの関連付けを外したうえで保持します。
           </p>
           <p>
             アプリのアンインストールやログアウトだけでは、サーバー上のアカウントは削除されません。
@@ -211,8 +224,13 @@
           <h3>Content and activity you provide</h3>
           <ul>
             <li>
-              Decks, card lists, collections, adjustment cards, and related
-              metadata.
+              Decks, card lists, deck version history, collections, adjustment
+              cards, and related metadata.
+            </li>
+            <li>
+              Optional details you record for each owned card, such as
+              condition, finish, grading information, acquisition price and
+              currency, personal valuation, and notes.
             </li>
             <li>
               Match results, opponent deck types, notes, battle logs, and usage
@@ -254,8 +272,10 @@
               preference.
             </li>
             <li>
-              Products purchased, subscription status, store transaction
-              identifiers, and the App user ID.
+              Products purchased, subscription status (including free-trial
+              eligibility and start, renewals, scheduled cancellations, refunds,
+              and expiration), store transaction identifiers, the price and
+              currency at purchase, and the App user ID.
             </li>
           </ul>
 
@@ -277,6 +297,14 @@
             <li>
               Provide deck, match, collection, CPU battle, notification, and
               purchase features.
+            </li>
+            <li>
+              Determine entitlement to the paid plan (PokeBuddy Plus) and
+              provide paid features such as personal match insights.
+            </li>
+            <li>
+              Analyze purchases and subscriptions in aggregate, such as trial
+              conversion, renewal, and refund rates.
             </li>
             <li>
               Display ads, manage consent, measure advertising, and prevent
@@ -310,7 +338,12 @@
               prevention, and consent management.
             </li>
             <li>
-              <strong>RevenueCat</strong> for purchase and subscription status.
+              <strong>RevenueCat</strong> (RevenueCat, Inc., United States) for
+              purchase and subscription status. We send purchase and
+              subscription information together with the App user ID to
+              RevenueCat, which we use to determine and analyze subscription
+              status. See the
+              <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat Privacy Policy</a>.
             </li>
             <li>
               <strong>Apple and Google</strong> for sign-in, app distribution,
@@ -335,7 +368,10 @@
             fraud prevention, or dispute resolution. Backups and
             service-provider systems may take up to approximately 180 days to
             complete their deletion cycles. Purchase records may be retained
-            longer by Apple, Google, RevenueCat, or as required by law.
+            longer by Apple, Google, RevenueCat, or as required by law. We keep
+            our own record of purchase and subscription events after account
+            deletion, with the link to the App user ID removed, for refunds,
+            fraud prevention, and accounting requirements.
           </p>
           <p>
             Uninstalling the App or signing out does not delete server-side
