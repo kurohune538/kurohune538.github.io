@@ -27,7 +27,7 @@
       <article class="document">
         <div class="meta">
           <span>制定日: 2026年7月28日</span>
-          <span>最終更新日: 2026年9月24日</span>
+          <span>最終更新日: 2026年10月1日</span>
           <span>運営者: PokeBuddy developer (Yamico)</span>
         </div>
 
@@ -58,9 +58,18 @@
             <li>
               対戦結果、対戦相手のデッキ種別、メモ、バトルログなどの利用記録
             </li>
+            <li>
+              設定で明示的に共有を有効にした場合、自由配置や「1手戻す」を使わず完了した
+              2デッキ一人回しの再生データ（カードIDによるデッキ構成、初期配置、行動と選択、
+              勝敗、終了理由、ターン数、乱数seed、ルール・カードデータ版、アプリ版）
+            </li>
             <li>アプリ設定、通知既読状態、カード情報に関する報告</li>
             <li>利用者が明示的に選択してアップロードするプロフィール画像等</li>
           </ul>
+          <p>
+            一人回し再生データにはデッキ名、表示名、プロフィール情報、可読形式の対戦ログ、端末情報を
+            含めません。送信数の制限とアカウント削除時の消去のため、内部ユーザーIDに紐づけて保存します。
+          </p>
 
           <h3>端末・診断情報</h3>
           <ul>
@@ -95,6 +104,10 @@
           <ul>
             <li>本アプリの提供、ログイン、端末間同期、バックアップ</li>
             <li>デッキ、対戦、コレクション、CPU対戦、通知機能の提供</li>
+            <li>
+              明示的に共有された一人回し再生データから、AI対戦機能の改善候補を調査すること
+              （データだけで採用を決めず、別の評価対戦で安全性と性能を確認します）
+            </li>
             <li>
               対戦記録の匿名集計による相性表の提供（使用デッキと相手デッキの種類、勝敗、BO1
               /
@@ -158,6 +171,10 @@
             <li>アプリ内からデッキや対戦記録等を削除できます。</li>
             <li>
               アプリの設定から、自分の対戦記録を相性表の匿名集計に含めないよう変更できます。変更は次回の集計から反映されます。
+            </li>
+            <li>
+              一人回し再生データの共有は既定で無効です。アプリの設定からいつでも有効・無効を変更でき、
+              無効にした後の対局は送信されません。既に保存されたデータはアカウント削除または利用停止の依頼で削除できます。
             </li>
             <li>
               保有情報の確認、訂正、削除、利用停止について当方へ依頼できます。
@@ -235,12 +252,25 @@
               history.
             </li>
             <li>
+              If you explicitly enable sharing in Settings, replay data from
+              completed two-deck solo games played without free moves or Undo,
+              including card-ID deck lists, initial setup, actions and choices,
+              outcome, end reason, turn count, random seed, rules/card-data
+              version, and App version.
+            </li>
+            <li>
               App preferences, notification read status, and card-data reports.
             </li>
             <li>
               Profile images or other images you explicitly choose to upload.
             </li>
           </ul>
+          <p>
+            Solo-game replay data does not include deck names, display names,
+            profile information, human-readable battle logs, or device
+            information. It is stored with an internal user ID only to enforce
+            submission limits and delete the data when the account is deleted.
+          </p>
 
           <h3>Device and diagnostic information</h3>
           <ul>
@@ -290,6 +320,12 @@
             <li>
               Provide deck, match, collection, CPU battle, and notification
               features.
+            </li>
+            <li>
+              Investigate possible improvements to AI battle features using
+              solo-game replay data you explicitly choose to share. We do not
+              adopt a change based on this data alone; safety and performance
+              are checked in separate evaluation battles.
             </li>
             <li>
               Display ads, manage consent, measure advertising, and prevent
@@ -386,6 +422,13 @@
               You can choose in the App settings not to include your match
               records in the anonymized matchup aggregation. The change applies
               from the next aggregation.
+            </li>
+            <li>
+              Solo-game replay sharing is disabled by default. You can enable
+              or disable it at any time in Settings. Games played after you
+              disable it are not sent. Previously stored replay data can be
+              deleted by deleting your account or requesting restriction of
+              processing.
             </li>
           </ul>
 
