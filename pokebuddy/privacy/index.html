@@ -68,7 +68,7 @@
           </ul>
           <p>
             一人回し再生データにはデッキ名、表示名、プロフィール情報、可読形式の対戦ログ、端末情報を
-            含めません。送信数の制限とアカウント削除時の消去のため、内部ユーザーIDに紐づけて保存します。
+            含めません。送信数の制限、アカウント削除時の消去、および利用者から届いた不具合報告とその対局の照合のため、内部ユーザーIDに紐づけて保存します。
           </p>
 
           <h3>端末・診断情報</h3>
@@ -107,6 +107,9 @@
             <li>
               収集条件を満たして自動的に送信された一人回し再生データから、AI対戦機能の改善候補を調査すること
               （データだけで採用を決めず、別の評価対戦で安全性と性能を確認します）
+            </li>
+            <li>
+              利用者から届いた不具合報告について、同じ利用者の一人回し再生データを再生して原因を調べること
             </li>
             <li>
               対戦記録の匿名集計による相性表の提供（使用デッキと相手デッキの種類、勝敗、BO1
@@ -266,7 +269,8 @@
             Solo-game replay data does not include deck names, display names,
             profile information, human-readable battle logs, or device
             information. It is stored with an internal user ID only to enforce
-            submission limits and delete the data when the account is deleted.
+            submission limits, delete the data when the account is deleted, and
+            match bug reports you send with the games they refer to.
           </p>
 
           <h3>Device and diagnostic information</h3>
@@ -323,6 +327,10 @@
               automatically sent solo-game replay data that meets our collection
               criteria. We do not adopt a change based on this data alone;
               safety and performance are checked in separate evaluation battles.
+            </li>
+            <li>
+              Investigate bug reports you send by replaying your solo-game
+              replay data.
             </li>
             <li>
               Display ads, manage consent, measure advertising, and prevent
