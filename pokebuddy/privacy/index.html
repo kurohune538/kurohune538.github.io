@@ -141,7 +141,7 @@
             検索語、デッキ名、カード名、メモ、対戦ログは送信しません。GA4はcookie（<code>_ga</code>など）を使用します。
           </p>
           <p>
-            欧州経済領域（EEA。EU加盟国を含みます）、英国およびスイスからのアクセスでは、同意バナーで許可されるまでGA4を読み込みません（オプトイン）。それ以外の地域からのアクセスでは既定で有効とし、設定画面からいつでも無効にできます（オプトアウト）。同意した場合も、設定画面からいつでも無効にできます。アクセス元の地域は当方のサーバーがIPアドレスから判定し、判定できない場合は同意を求めます。選択の内容はブラウザのlocalStorageに保存します。
+            欧州経済領域（EEA。EU加盟国を含みます）、英国およびスイスからのアクセスでは、同意バナーで許可されるまでGA4を読み込みません（オプトイン）。それ以外の地域からのアクセスでは既定で有効とし、設定画面からいつでも無効にできます（オプトアウト）。同意した場合も、設定画面からいつでも無効にできます。アクセス元の地域は当方のサーバーがIPアドレスから判定し、判定できない場合は同意を求めます。選択の内容はブラウザのlocalStorageに保存します。まだ選択していない間（地域の判定中や同意バナーの表示中）に行われた操作のイベントは、端末のメモリに最大30件まで一時的に保持し、分析が有効になった場合（同意した場合、または同意の不要な地域と判定された場合）に送信し、許可しなかった場合は送信せずに破棄します。
           </p>
           <p>
             GA4で収集された情報は、Googleのプライバシーポリシーに従って取り扱われます。Googleによる情報の利用については、<a
@@ -152,9 +152,21 @@
 
           <h3>Web版のエラー送信（Sentry）</h3>
           <p>
-            Web版で予期しないエラーが発生した場合、エラーの内容、発生した画面の名前、本サービスのバージョン、ブラウザとOSの種類をSentry（Functional
-            Software,
-            Inc.）へ送信します。この送信にcookieは使用せず、IPアドレスはSentryに保存しない設定にしています。メールアドレス、検索語、デッキ名、URLのクエリは送信前に取り除きます。エラーの送信は、本サービスを安定して運用するという当方の正当な利益に基づき、同意を求めずに常に行います（設定から停止することはできません）。
+            Web版で予期しないエラーが発生した場合、次の情報をSentry（Functional
+            Software, Inc.）へ送信します。
+          </p>
+          <ul>
+            <li>エラーの内容</li>
+            <li>
+              発生した画面の名前と、エラーが起きるまでの画面遷移および通信先URLの履歴（URLのパラメータの値は伏せます）
+            </li>
+            <li>
+              本サービスのバージョン、利用環境の種類（Windows版、インストールしたPWA、ブラウザのいずれか）
+            </li>
+            <li>ブラウザとOSの種類（User-Agent）</li>
+          </ul>
+          <p>
+            内部ユーザーID、クリックした画面上の要素、consoleの出力は送信しません。表示中のページのURLと、User-Agent以外のリクエストヘッダーも送信しません。メールアドレス、検索語、デッキ名、URLのクエリの値は送信前に取り除くか伏せ、デッキや対戦などのID（UUID）は伏せ字に置き換えます。この送信にcookieは使用せず、IPアドレスはSentryに保存しない設定にしています。エラーの送信は、本サービスを安定して運用するという当方の正当な利益に基づき、同意を求めずに常に行います（設定から停止することはできません）。
           </p>
 
           <h3>広告に関する情報（ネイティブアプリで広告を有効にした場合）</h3>
@@ -278,7 +290,7 @@
             <li>送信先: Functional Software, Inc.</li>
             <li>
               送信される情報:
-              エラーの内容、発生した画面の名前、本サービスのバージョン、ブラウザとOSの種類
+              エラーの内容、発生した画面の名前、エラーが起きるまでの画面遷移と通信先URLの履歴（URLのパラメータの値とIDは伏せます）、本サービスのバージョン、利用環境の種類（Windows版・インストールしたPWA・ブラウザ）、ブラウザとOSの種類（User-Agent）
             </li>
             <li>
               利用目的: 不具合の検知と原因の調査による本サービスの安定運用
@@ -577,7 +589,12 @@
             consent, you can also turn analytics off at any time in Settings.
             Our server determines your region from your IP address; if the
             region cannot be determined, we ask for your consent. Your choice is
-            stored in your browser’s localStorage.
+            stored in your browser’s localStorage. Events from actions you take
+            before you have made a choice (while your region is being determined
+            or the consent banner is shown) are held temporarily in memory on
+            your device, up to 30 events. They are sent if analytics becomes
+            enabled (you consent, or your region is determined not to require
+            consent) and are discarded without being sent if you decline.
           </p>
           <p>
             Information collected by GA4 is handled under Google’s Privacy
@@ -590,15 +607,33 @@
 
           <h3>Error reporting in the web app (Sentry)</h3>
           <p>
-            If an unexpected error occurs in the web app, we send the error
-            details, the name of the screen where it occurred, the Service
-            version, and the browser and operating system type to Sentry
-            (Functional Software, Inc.). This reporting does not use cookies,
-            and Sentry is configured not to store IP addresses. Email addresses,
-            search terms, deck names, and URL query strings are removed before
-            sending. Error reporting is always on and does not ask for consent;
-            it is based on our legitimate interest in operating the Services
-            reliably and cannot be turned off in Settings.
+            If an unexpected error occurs in the web app, we send the following
+            information to Sentry (Functional Software, Inc.):
+          </p>
+          <ul>
+            <li>Error details.</li>
+            <li>
+              The name of the screen where the error occurred, and the history
+              of screen transitions and network request URLs leading up to the
+              error, with URL parameter values masked.
+            </li>
+            <li>
+              The Service version and the type of client: the Windows app, an
+              installed PWA, or a browser.
+            </li>
+            <li>Browser and operating system type (the User-Agent).</li>
+          </ul>
+          <p>
+            We do not send your internal user ID, the elements you click, or
+            console output. We also do not send the URL of the page you are
+            viewing or any request headers other than the User-Agent. Email
+            addresses, search terms, deck names, and URL query values are
+            removed or masked before sending, and IDs such as deck and match IDs
+            (UUIDs) are replaced with placeholders. This reporting does not use
+            cookies, and Sentry is configured not to store IP addresses. Error
+            reporting is always on and does not ask for consent; it is based on
+            our legitimate interest in operating the Services reliably and
+            cannot be turned off in Settings.
           </p>
 
           <h3>
@@ -766,8 +801,11 @@
             <li>Recipient: Functional Software, Inc.</li>
             <li>
               Information sent: error details, the name of the screen where the
-              error occurred, Service version, and browser and operating system
-              type.
+              error occurred, the history of screen transitions and network
+              request URLs leading up to the error (with URL parameter values
+              and IDs masked), Service version, client type (Windows app,
+              installed PWA, or browser), and browser and operating system type
+              (User-Agent).
             </li>
             <li>
               Purpose: detecting errors and investigating their causes to
