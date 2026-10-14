@@ -27,7 +27,7 @@
       <article class="document">
         <div class="meta">
           <span>制定日: 2026年7月28日</span>
-          <span>最終更新日: 2026年10月8日</span>
+          <span>最終更新日: 2026年10月14日</span>
           <span>運営者: PokeBuddy developer (Yamico)</span>
         </div>
 
@@ -36,7 +36,17 @@
           <p>
             本プライバシーポリシーは、PokeBuddy developer
             (Yamico)（以下「当方」）が提供する
-            PokeBuddy（日本語表示名「ポケバディ」）のiOS・Androidアプリおよびブラウザ版（以下、総称して「本サービス」）における利用者情報の取扱いに適用されます。
+            PokeBuddy（日本語表示名「ポケバディ」）のiOS・Androidアプリ、ブラウザ版およびWindows版（以下、総称して「本サービス」）における利用者情報の取扱いに適用されます。
+          </p>
+          <p>
+            Windows版は、ブラウザ版（<a href="https://pokebuddy.app/web/"
+              >https://pokebuddy.app/web/</a
+            >）をPWA（プログレッシブウェブアプリ）としてパッケージし、Microsoft
+            Storeで配布するアプリです。アプリの本体はブラウザ版と同じものを読み込むため、情報の取扱いはブラウザ版と同じです。本ポリシーでは、ブラウザ版とWindows版をあわせて「Web版」といいます。Microsoft
+            StoreでのWindows版の入手・ダウンロードに関する情報の取扱いは、<a
+              href="https://privacy.microsoft.com/ja-jp/privacystatement"
+              >Microsoftのプライバシーに関する声明</a
+            >に従います。
           </p>
 
           <h2>2. 取得する情報</h2>
@@ -85,21 +95,66 @@
             </li>
           </ul>
 
-          <h3>ブラウザ版の保存領域・通信ログ</h3>
+          <h3>Web版の保存領域・通信ログ</h3>
           <ul>
             <li>
-              ログインセッション、OAuth後の復帰先、設定、ログアウトのタブ間同期、カード情報等の表示を高速化するためのキャッシュを、local
+              ログインセッション、OAuth後の復帰先、設定、ログアウトのタブ間同期、カード情報等の表示を高速化するためのキャッシュ、利用状況の分析に関する選択を、local
               storage、session
               storage、IndexedDB等のブラウザ保存領域に保存します。
             </li>
             <li>
-              ブラウザ版へのアクセス時、配信基盤がIPアドレス、IPアドレスから推定されるおおよその地域、ブラウザ・端末情報、アクセス日時、要求URL、応答状況等の通信ログを処理する場合があります。
+              利用状況の分析が有効な場合、Google アナリティクス
+              4がcookie（<code>_ga</code>など）に識別子を保存します。
+            </li>
+            <li>
+              Web版へのアクセス時、配信基盤がIPアドレス、IPアドレスから推定されるおおよその地域、ブラウザ・端末情報、アクセス日時、要求URL、応答状況等の通信ログを処理する場合があります。
             </li>
           </ul>
           <p>
-            これらのブラウザ保存領域は、本サービスの提供、セキュリティ、設定の保持、同期・表示のために利用し、当方による広告追跡には利用しません。ブラウザ版では、Google
-            Analytics for Firebase、SentryおよびGoogle
-            AdMobを有効にしていません。
+            これらのブラウザ保存領域は、本サービスの提供、セキュリティ、設定の保持、同期・表示および利用状況の分析のために利用し、当方が広告の配信や広告のための追跡に利用することはありません。Web版では、Google
+            AdMob（広告）を有効にしていません。
+          </p>
+
+          <h3>Web版の利用状況の分析（Google アナリティクス 4）</h3>
+          <p>
+            Web版では、ネイティブアプリと同じGoogle アナリティクス
+            4（以下「GA4」）のプロパティに、Web用のデータストリームとして次の情報を送信します（gtag.js）。
+          </p>
+          <ul>
+            <li>
+              表示した画面の名前（URL、URLのクエリ、デッキやカードのIDは含めません）
+            </li>
+            <li>
+              操作のイベント（ネイティブアプリと同じイベント名で送信します）
+            </li>
+            <li>
+              内部ユーザーID（ランダムに生成されたUUIDです。名前やメールアドレスは送信しません）
+            </li>
+            <li>
+              利用環境の種類（Windows版、インストールしたPWA、ブラウザのいずれか）
+            </li>
+            <li>
+              ブラウザ・OSの種類、IPアドレスから推定されるおおよその地域など、GA4が自動的に収集する情報
+            </li>
+          </ul>
+          <p>
+            検索語、デッキ名、カード名、メモ、対戦ログは送信しません。GA4はcookie（<code>_ga</code>など）を使用します。
+          </p>
+          <p>
+            欧州経済領域（EEA。EU加盟国を含みます）、英国およびスイスからのアクセスでは、同意バナーで許可されるまでGA4を読み込みません（オプトイン）。それ以外の地域からのアクセスでは既定で有効とし、設定画面からいつでも無効にできます（オプトアウト）。同意した場合も、設定画面からいつでも無効にできます。アクセス元の地域は当方のサーバーがIPアドレスから判定し、判定できない場合は同意を求めます。選択の内容はブラウザのlocalStorageに保存します。
+          </p>
+          <p>
+            GA4で収集された情報は、Googleのプライバシーポリシーに従って取り扱われます。Googleによる情報の利用については、<a
+              href="https://policies.google.com/technologies/partner-sites?hl=ja"
+              >Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用</a
+            >をご覧ください。
+          </p>
+
+          <h3>Web版のエラー送信（Sentry）</h3>
+          <p>
+            Web版で予期しないエラーが発生した場合、エラーの内容、発生した画面の名前、本サービスのバージョン、ブラウザとOSの種類をSentry（Functional
+            Software,
+            Inc.）へ送信します。この送信にcookieは使用せず、IPアドレスはSentryに保存しない設定にしています。メールアドレス、検索語、デッキ名、URLのクエリは送信前に取り除きます。エラーの送信は、本サービスを安定して運用するという当方の正当な利益に基づき、同意を求めずに常に行います（設定から停止することはできません）。
           </p>
 
           <h3>広告に関する情報（ネイティブアプリで広告を有効にした場合）</h3>
@@ -138,6 +193,10 @@
               BO3の区別を、個人を特定できない形で集計します。1つのデッキの組み合わせにつき5試合以上かつ3人以上の記録がある場合だけ表示し、個々の記録、ユーザーID、表示名は表示しません）
             </li>
             <li>
+              利用状況の分析による本サービスの改善（ネイティブアプリではGoogle
+              Analytics for Firebase、Web版ではGA4を利用します）
+            </li>
+            <li>
               ネイティブアプリで広告を有効にした場合の広告表示、同意管理、効果測定、不正利用防止
             </li>
             <li>不具合解析、性能改善、セキュリティ確保、サポート対応</li>
@@ -157,8 +216,12 @@
               Messaging（プッシュ通知）
             </li>
             <li>
-              <strong>Sentry</strong>（Functional Software,
-              Inc.、米国。ネイティブアプリのみ）: 不具合・エラー・性能情報の収集
+              <strong>Google アナリティクス 4</strong>（Google LLC。Web版）:
+              利用状況の分析
+            </li>
+            <li>
+              <strong>Sentry</strong>（Functional Software, Inc.、米国）:
+              不具合・エラー・性能情報の収集（Web版ではエラー情報のみ）
             </li>
             <li>
               <strong>Google AdMob</strong
@@ -168,10 +231,15 @@
             <li>
               <a href="https://vercel.com/legal/privacy-notice"
                 ><strong>Vercel</strong></a
-              >（ブラウザ版）:
+              >（Web版）:
               Webホスティング、コンテンツ配信、通信ログの処理、セキュリティ
             </li>
             <li><strong>Apple / Google</strong>: サインイン、アプリ配信</li>
+            <li>
+              <a href="https://privacy.microsoft.com/ja-jp/privacystatement"
+                ><strong>Microsoft</strong></a
+              >: Windows版の配信（Microsoft Store）
+            </li>
           </ul>
           <p>
             当方は、個人情報を金銭の対価として販売しません。ただし、広告SDKは利用者の同意や端末設定に
@@ -180,7 +248,95 @@
             ことがあります。
           </p>
 
-          <h2>5. 保存期間と削除</h2>
+          <h2>5. 外部送信（電気通信事業法に基づく公表）</h2>
+          <p>
+            電気通信事業法第27条の12に基づき、利用状況の分析、不具合の把握および広告のために利用者の端末から第三者へ送信される利用者に関する情報、その送信先および利用目的を次のとおり公表します。
+          </p>
+
+          <h3>Google アナリティクス 4（Web版）</h3>
+          <ul>
+            <li>送信先: Google LLC</li>
+            <li>
+              送信される情報:
+              表示した画面の名前、操作のイベント、内部ユーザーID、利用環境の種類（Windows版・インストールしたPWA・ブラウザ）、cookieに保存された識別子、ブラウザ・OSの種類、IPアドレスから推定されるおおよその地域など
+            </li>
+            <li>利用目的: 利用状況の分析による本サービスの改善</li>
+            <li>
+              送信の条件:
+              EEA・英国・スイスからのアクセスでは、同意バナーで許可した場合だけ送信します。それ以外の地域では既定で送信し、設定画面から停止できます。
+            </li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://policies.google.com/privacy?hl=ja"
+                >Google プライバシーポリシー</a
+              >
+            </li>
+          </ul>
+
+          <h3>Sentry（Web版）</h3>
+          <ul>
+            <li>送信先: Functional Software, Inc.</li>
+            <li>
+              送信される情報:
+              エラーの内容、発生した画面の名前、本サービスのバージョン、ブラウザとOSの種類
+            </li>
+            <li>
+              利用目的: 不具合の検知と原因の調査による本サービスの安定運用
+            </li>
+            <li>送信の条件: 予期しないエラーが発生した場合</li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
+            </li>
+          </ul>
+
+          <h3>Google Analytics for Firebase（ネイティブアプリ）</h3>
+          <ul>
+            <li>送信先: Google LLC</li>
+            <li>
+              送信される情報:
+              表示した画面の名前、操作のイベント、内部ユーザーID、FirebaseインストールID、端末の種類・OS・本サービスのバージョン・言語、IPアドレスから推定されるおおよその地域など
+            </li>
+            <li>利用目的: 利用状況の分析による本サービスの改善</li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://policies.google.com/privacy?hl=ja"
+                >Google プライバシーポリシー</a
+              >
+            </li>
+          </ul>
+
+          <h3>Sentry（ネイティブアプリ）</h3>
+          <ul>
+            <li>送信先: Functional Software, Inc.</li>
+            <li>
+              送信される情報:
+              クラッシュ・エラー情報、性能情報、通信先URL（URLのパラメータの値は除きます）と応答時間、画面遷移・操作の履歴、内部ユーザーID、端末の種類・OS、本サービスのバージョン
+            </li>
+            <li>利用目的: 不具合の解析と性能の改善</li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
+            </li>
+          </ul>
+
+          <h3>Google AdMob（ネイティブアプリで広告を有効にした場合）</h3>
+          <ul>
+            <li>送信先: Google LLC</li>
+            <li>
+              送信される情報: 広告ID、App Set
+              ID、IPアドレス、広告やアプリとの操作、診断情報、広告同意の状態等
+            </li>
+            <li>利用目的: 広告の配信、効果測定、不正防止、同意管理</li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://policies.google.com/privacy?hl=ja"
+                >Google プライバシーポリシー</a
+              >
+            </li>
+          </ul>
+
+          <h2>6. 保存期間と削除</h2>
           <p>
             アカウントおよび利用者が登録したデータは、原則としてアカウントが有効な間保存します。
             削除依頼を確認後、法令上の保存義務、不正防止、紛争対応等に必要な情報を除き、関連データを
@@ -194,11 +350,20 @@
             をご覧ください。
           </p>
 
-          <h2>6. 利用者の選択と権利</h2>
+          <h2>7. 利用者の選択と権利</h2>
           <ul>
             <li>端末設定から通知、カメラ、写真へのアクセスを変更できます。</li>
             <li>
-              ブラウザ設定から、本サービスがブラウザ内に保存した情報を削除できます。ただし、サーバー上のアカウントや同期済みデータは削除されません。
+              ブラウザ設定等から、Web版がブラウザ内に保存した情報（cookieを含みます）を削除できます。ただし、サーバー上のアカウントや同期済みデータは削除されません。
+            </li>
+            <li>
+              Web版の利用状況の分析（GA4）は、設定画面からいつでも無効にできます。EEA・英国・スイスからのアクセスでは、同意バナーで許可するまで無効です。ブラウザで利用する場合は、Googleが提供する<a
+                href="https://tools.google.com/dlpage/gaoptout?hl=ja"
+                >Google アナリティクス オプトアウト アドオン</a
+              >でも無効にできます。
+            </li>
+            <li>
+              ブラウザのcookieやサイトデータを削除すると、利用状況の分析に関する選択も削除され、次回のアクセス時に地域に応じた初期の状態（同意バナーの表示または既定で有効）に戻ります。
             </li>
             <li>
               広告同意画面および端末の広告設定から、広告に関する選択を変更できます。
@@ -216,32 +381,32 @@
             </li>
           </ul>
 
-          <h2>7. セキュリティ</h2>
+          <h2>8. セキュリティ</h2>
           <p>
             当方は、通信の暗号化、認証、アクセス制御その他の合理的な安全管理措置を講じます。
             ただし、インターネット上の送信または保存について絶対的な安全性を保証するものではありません。
           </p>
 
-          <h2>8. 国際的なデータ処理</h2>
+          <h2>9. 国際的なデータ処理</h2>
           <p>
             本サービスの第三者サービスは、利用者の居住国外（米国を含みます）の設備で情報を処理する場合が
             あります。当方は、適用法令および各サービスの契約に従って情報を取り扱います。
           </p>
 
-          <h2>9. 子どものプライバシー</h2>
+          <h2>10. 子どものプライバシー</h2>
           <p>
             本サービスは、各地域の法令で保護される年齢未満の子どもを対象として意図的に設計されたものでは
             ありません。保護者の同意なく対象年齢未満の子どもの個人情報を取得したことが判明した場合は、
             合理的な範囲で速やかに削除します。
           </p>
 
-          <h2>10. 本ポリシーの変更</h2>
+          <h2>11. 本ポリシーの変更</h2>
           <p>
             機能、法令または第三者サービスの変更に応じて本ポリシーを更新することがあります。
             重要な変更は、本ページまたは本サービス内でお知らせします。
           </p>
 
-          <h2>11. お問い合わせ</h2>
+          <h2>12. お問い合わせ</h2>
           <p>
             PokeBuddy developer (Yamico)<br />
             メール:
@@ -255,9 +420,23 @@
           <h2>1. Scope</h2>
           <p>
             This Privacy Policy applies to the handling of information in the
-            PokeBuddy iOS and Android apps and the browser-based web app
-            (together, the “Services”), provided by PokeBuddy developer (Yamico)
-            (“we,” “us,” or “our”).
+            PokeBuddy iOS and Android apps, the browser-based web app, and the
+            Windows app (together, the “Services”), provided by PokeBuddy
+            developer (Yamico) (“we,” “us,” or “our”).
+          </p>
+          <p>
+            The Windows app is the browser-based web app (<a
+              href="https://pokebuddy.app/web/"
+              >https://pokebuddy.app/web/</a
+            >) packaged as a progressive web app (PWA) and distributed through
+            the Microsoft Store. It loads the same app as the browser version,
+            so information is handled in the same way. In this Policy, “web app”
+            refers to both the browser version and the Windows app. Information
+            related to obtaining and downloading the Windows app from the
+            Microsoft Store is handled under the
+            <a href="https://privacy.microsoft.com/en-us/privacystatement"
+              >Microsoft Privacy Statement</a
+            >.
           </p>
 
           <h2>2. Information We Collect</h2>
@@ -333,10 +512,14 @@
           <ul>
             <li>
               The web app stores sign-in sessions, the return path used after
-              OAuth, preferences, cross-tab sign-out synchronization, and caches
-              used to display card data and other content more quickly in
-              browser storage such as local storage, session storage, and
-              IndexedDB.
+              OAuth, preferences, cross-tab sign-out synchronization, caches
+              used to display card data and other content more quickly, and your
+              analytics choice in browser storage such as local storage, session
+              storage, and IndexedDB.
+            </li>
+            <li>
+              When analytics is enabled, Google Analytics 4 stores identifiers
+              in cookies (such as <code>_ga</code>).
             </li>
             <li>
               When you access the web app, the hosting infrastructure may
@@ -347,9 +530,75 @@
           </ul>
           <p>
             We use this browser storage to provide and secure the Services,
-            remember preferences, synchronize state, and display content. We do
-            not use it for advertising tracking. The web app does not enable
-            Google Analytics for Firebase, Sentry, or Google AdMob.
+            remember preferences, synchronize state, display content, and, where
+            enabled, analyze usage. We do not use it to serve ads or to track
+            you for advertising. The web app does not enable Google AdMob (ads).
+          </p>
+
+          <h3>Usage analytics in the web app (Google Analytics 4)</h3>
+          <p>
+            The web app sends the following information, using gtag.js, to the
+            same Google Analytics 4 (“GA4”) property used by the native apps, as
+            a web data stream:
+          </p>
+          <ul>
+            <li>
+              Names of the screens you view (not URLs, URL query strings, or
+              deck or card IDs).
+            </li>
+            <li>
+              Events for actions you take, using the same event names as the
+              native apps.
+            </li>
+            <li>
+              Your internal user ID (a randomly generated UUID). We do not send
+              your name or email address.
+            </li>
+            <li>
+              The type of client: the Windows app, an installed PWA, or a
+              browser.
+            </li>
+            <li>
+              Information GA4 collects automatically, such as browser and
+              operating system type and approximate location inferred from your
+              IP address.
+            </li>
+          </ul>
+          <p>
+            We do not send search terms, deck names, card names, notes, or
+            battle logs. GA4 uses cookies (such as <code>_ga</code>).
+          </p>
+          <p>
+            For access from the European Economic Area (EEA, including the EU
+            member states), the United Kingdom, and Switzerland, GA4 is not
+            loaded until you allow it in the consent banner (opt-in). For access
+            from other regions, analytics is enabled by default and can be
+            turned off at any time in Settings (opt-out). If you have given
+            consent, you can also turn analytics off at any time in Settings.
+            Our server determines your region from your IP address; if the
+            region cannot be determined, we ask for your consent. Your choice is
+            stored in your browser’s localStorage.
+          </p>
+          <p>
+            Information collected by GA4 is handled under Google’s Privacy
+            Policy. To learn how Google uses this information, see
+            <a href="https://policies.google.com/technologies/partner-sites"
+              >How Google uses information from sites or apps that use our
+              services</a
+            >.
+          </p>
+
+          <h3>Error reporting in the web app (Sentry)</h3>
+          <p>
+            If an unexpected error occurs in the web app, we send the error
+            details, the name of the screen where it occurred, the Service
+            version, and the browser and operating system type to Sentry
+            (Functional Software, Inc.). This reporting does not use cookies,
+            and Sentry is configured not to store IP addresses. Email addresses,
+            search terms, deck names, and URL query strings are removed before
+            sending. Error reporting is always on and does not ask for consent;
+            it is based on our legitimate interest in operating the Services
+            reliably and cannot be turned off in Settings.
           </p>
 
           <h3>
@@ -396,6 +645,10 @@
               replay data.
             </li>
             <li>
+              Analyze usage to improve the Services (Google Analytics for
+              Firebase in the native apps and GA4 in the web app).
+            </li>
+            <li>
               Display ads, manage consent, measure advertising, and prevent
               fraud when advertising is enabled in a native app.
             </li>
@@ -432,8 +685,13 @@
               notifications).
             </li>
             <li>
-              <strong>Sentry</strong> (Functional Software, Inc., United States;
-              native apps only) for crash, error, and performance reporting.
+              <strong>Google Analytics 4</strong> (Google LLC; web app) for
+              usage analytics.
+            </li>
+            <li>
+              <strong>Sentry</strong> (Functional Software, Inc., United States)
+              for crash, error, and performance reporting (error information
+              only in the web app).
             </li>
             <li>
               <strong>Google AdMob</strong> (when ads are enabled in a native
@@ -451,6 +709,12 @@
               <strong>Apple and Google</strong> for sign-in and app
               distribution.
             </li>
+            <li>
+              <a href="https://privacy.microsoft.com/en-us/privacystatement"
+                ><strong>Microsoft</strong></a
+              >
+              for distribution of the Windows app (Microsoft Store).
+            </li>
           </ul>
           <p>
             We do not sell personal information for monetary consideration.
@@ -461,7 +725,116 @@
             transfer.
           </p>
 
-          <h2>5. Retention and Deletion</h2>
+          <h2>
+            5. External Transmission of Information (Japan Telecommunications
+            Business Act)
+          </h2>
+          <p>
+            In accordance with Article 27-12 of Japan’s Telecommunications
+            Business Act, we disclose below the information about users that is
+            sent from users’ devices to third parties for usage analytics, error
+            monitoring, and advertising, together with the recipients and the
+            purposes of use.
+          </p>
+
+          <h3>Google Analytics 4 (web app)</h3>
+          <ul>
+            <li>Recipient: Google LLC</li>
+            <li>
+              Information sent: names of screens viewed, action events, internal
+              user ID, client type (Windows app, installed PWA, or browser),
+              identifiers stored in cookies, browser and operating system type,
+              approximate location inferred from the IP address, and similar
+              information.
+            </li>
+            <li>Purpose: analyzing usage to improve the Services.</li>
+            <li>
+              When sent: for access from the EEA, the United Kingdom, and
+              Switzerland, only after you allow it in the consent banner. In
+              other regions, sent by default; you can stop it in Settings.
+            </li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://policies.google.com/privacy"
+                >Google Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h3>Sentry (web app)</h3>
+          <ul>
+            <li>Recipient: Functional Software, Inc.</li>
+            <li>
+              Information sent: error details, the name of the screen where the
+              error occurred, Service version, and browser and operating system
+              type.
+            </li>
+            <li>
+              Purpose: detecting errors and investigating their causes to
+              operate the Services reliably.
+            </li>
+            <li>When sent: when an unexpected error occurs.</li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
+            </li>
+          </ul>
+
+          <h3>Google Analytics for Firebase (native apps)</h3>
+          <ul>
+            <li>Recipient: Google LLC</li>
+            <li>
+              Information sent: names of screens viewed, action events, internal
+              user ID, Firebase installation ID, device type, operating system,
+              Service version, language, approximate location inferred from the
+              IP address, and similar information.
+            </li>
+            <li>Purpose: analyzing usage to improve the Services.</li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://policies.google.com/privacy"
+                >Google Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h3>Sentry (native apps)</h3>
+          <ul>
+            <li>Recipient: Functional Software, Inc.</li>
+            <li>
+              Information sent: crash and error data, performance data, network
+              URLs (with URL parameter values removed) and response timing,
+              screen-transition and interaction history, internal user ID,
+              device type, operating system, and Service version.
+            </li>
+            <li>Purpose: diagnosing errors and improving performance.</li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
+            </li>
+          </ul>
+
+          <h3>Google AdMob (when ads are enabled in a native app)</h3>
+          <ul>
+            <li>Recipient: Google LLC</li>
+            <li>
+              Information sent: advertising ID, App Set ID, IP address,
+              interactions with ads and the app, diagnostic information,
+              advertising consent status, and similar information.
+            </li>
+            <li>
+              Purpose: serving and measuring ads, preventing fraud, and managing
+              consent.
+            </li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://policies.google.com/privacy"
+                >Google Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h2>6. Retention and Deletion</h2>
           <p>
             Account information and user-provided content are generally retained
             while your account remains active. After we verify a deletion
@@ -479,16 +852,32 @@
             submit a request.
           </p>
 
-          <h2>6. Your Choices and Rights</h2>
+          <h2>7. Your Choices and Rights</h2>
           <ul>
             <li>
               Manage notification, camera, and photo permissions in device
               settings.
             </li>
             <li>
-              Clear information stored by the Services in your browser through
-              your browser settings. This does not delete your server-side
-              account or synchronized data.
+              Clear information stored by the web app in your browser, including
+              cookies, through your browser or other settings. This does not
+              delete your server-side account or synchronized data.
+            </li>
+            <li>
+              Turn off usage analytics (GA4) in the web app at any time in
+              Settings. For access from the EEA, the United Kingdom, and
+              Switzerland, analytics stays off until you allow it in the consent
+              banner. When using a browser, you can also turn it off with the
+              <a href="https://tools.google.com/dlpage/gaoptout"
+                >Google Analytics Opt-out Browser Add-on</a
+              >
+              provided by Google.
+            </li>
+            <li>
+              If you clear your browser’s cookies and site data, your analytics
+              choice is also cleared, and on your next visit the default for
+              your region applies again (the consent banner is shown, or
+              analytics is enabled by default).
             </li>
             <li>
               Manage advertising choices through the consent interface and
@@ -516,21 +905,21 @@
             </li>
           </ul>
 
-          <h2>7. Security</h2>
+          <h2>8. Security</h2>
           <p>
             We use reasonable safeguards, including encrypted transmission,
             authentication, and access controls. No internet transmission or
             storage system can be guaranteed to be completely secure.
           </p>
 
-          <h2>8. International Processing</h2>
+          <h2>9. International Processing</h2>
           <p>
             Our service providers may process information outside your country,
             including in the United States. We handle information in accordance
             with applicable law and our agreements with those providers.
           </p>
 
-          <h2>9. Children’s Privacy</h2>
+          <h2>10. Children’s Privacy</h2>
           <p>
             The Services are not intentionally directed to children below the
             age protected by local law. If we learn that we collected a child’s
@@ -538,14 +927,14 @@
             reasonable steps to delete it.
           </p>
 
-          <h2>10. Changes to This Policy</h2>
+          <h2>11. Changes to This Policy</h2>
           <p>
             We may update this Policy when our features, legal obligations, or
             service providers change. We will provide notice of material changes
             on this page or within the Services.
           </p>
 
-          <h2>11. Contact</h2>
+          <h2>12. Contact</h2>
           <p>
             PokeBuddy developer (Yamico)<br />
             Email:
