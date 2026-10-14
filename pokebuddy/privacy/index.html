@@ -28,14 +28,13 @@
         <div class="meta">
           <span>制定日: 2026年7月28日</span>
           <span>最終更新日: 2026年10月14日</span>
-          <span>運営者: PokeBuddy developer (Yamico)</span>
+          <span>運営者: DesignCat Inc.</span>
         </div>
 
         <section id="ja" class="language-section">
           <h2>1. 適用範囲</h2>
           <p>
-            本プライバシーポリシーは、PokeBuddy developer
-            (Yamico)（以下「当方」）が提供する
+            本プライバシーポリシーは、DesignCat Inc.（以下「当方」）が提供する
             PokeBuddy（日本語表示名「ポケバディ」）のiOS・Androidアプリ、ブラウザ版およびWindows版（以下、総称して「本サービス」）における利用者情報の取扱いに適用されます。
           </p>
           <p>
@@ -98,7 +97,7 @@
           <h3>Web版の保存領域・通信ログ</h3>
           <ul>
             <li>
-              ログインセッション、OAuth後の復帰先、設定、ログアウトのタブ間同期、カード情報等の表示を高速化するためのキャッシュ、利用状況の分析に関する選択を、local
+              ログインセッション、OAuth後の復帰先、設定、ログアウトのタブ間同期、カード情報等の表示を高速化するためのキャッシュ、アクセス解析とエラー送信に関する選択を、local
               storage、session
               storage、IndexedDB等のブラウザ保存領域に保存します。
             </li>
@@ -141,7 +140,7 @@
             検索語、デッキ名、カード名、メモ、対戦ログは送信しません。GA4はcookie（<code>_ga</code>など）を使用します。
           </p>
           <p>
-            欧州経済領域（EEA。EU加盟国を含みます）、英国およびスイスからのアクセスでは、同意バナーで許可されるまでGA4を読み込みません（オプトイン）。それ以外の地域からのアクセスでは既定で有効とし、設定画面からいつでも無効にできます（オプトアウト）。同意した場合も、設定画面からいつでも無効にできます。アクセス元の地域は当方のサーバーがIPアドレスから判定し、判定できない場合は同意を求めます。選択の内容はブラウザのlocalStorageに保存します。まだ選択していない間（地域の判定中や同意バナーの表示中）に行われた操作のイベントは、端末のメモリに最大30件まで一時的に保持し、分析が有効になった場合（同意した場合、または同意の不要な地域と判定された場合）に送信し、許可しなかった場合は送信せずに破棄します。
+            欧州経済領域（EEA。EU加盟国を含みます）、英国およびスイスからのアクセスでは、同意ダイアログで許可されるまでGA4を読み込みません（オプトイン）。それ以外の地域からのアクセスでは既定で有効です（オプトアウト）。GA4と下記のSentryへのエラー送信は、設定画面の「アクセス解析とエラー送信」というひとつの選択に従い、どの地域でも設定画面からいつでも変更できます。アクセス元の地域は当方のサーバーがIPアドレスから判定し、判定できない場合はEEA等と同じく同意を求めます。選択の内容はブラウザのlocalStorageに保存します。まだ選択していない間（地域の判定中や同意ダイアログの表示中）に行われた操作のイベントは、端末のメモリに最大30件まで一時的に保持し、分析が有効になった場合（同意した場合、または同意の不要な地域と判定された場合）に送信し、許可しなかった場合は送信せずに破棄します。
           </p>
           <p>
             GA4で収集された情報は、Googleのプライバシーポリシーに従って取り扱われます。Googleによる情報の利用については、<a
@@ -166,7 +165,10 @@
             <li>ブラウザとOSの種類（User-Agent）</li>
           </ul>
           <p>
-            内部ユーザーID、クリックした画面上の要素、consoleの出力は送信しません。表示中のページのURLと、User-Agent以外のリクエストヘッダーも送信しません。メールアドレス、検索語、デッキ名、URLのクエリの値は送信前に取り除くか伏せ、デッキや対戦などのID（UUID）は伏せ字に置き換えます。この送信にcookieは使用せず、IPアドレスはSentryに保存しない設定にしています。エラーの送信は、本サービスを安定して運用するという当方の正当な利益に基づき、同意を求めずに常に行います（設定から停止することはできません）。
+            内部ユーザーID、クリックした画面上の要素、consoleの出力は送信しません。表示中のページのURLと、User-Agent以外のリクエストヘッダーも送信しません。メールアドレス、検索語、デッキ名、URLのクエリの値は送信前に取り除くか伏せ、デッキや対戦などのID（UUID）は伏せ字に置き換えます。この送信にcookieは使用せず、IPアドレスはSentryに保存しない設定にしています。
+          </p>
+          <p>
+            エラーの送信は、GA4と同じ設定画面の「アクセス解析とエラー送信」に従います。EEA・英国・スイスからのアクセス（地域を判定できない場合を含みます）では、同意ダイアログで許可されるまで送信しません。それ以外の地域では既定で有効で、設定画面で無効にするとGA4とSentryの両方への送信が止まります。設定はいつでも変更できます。
           </p>
 
           <h3>広告に関する情報（ネイティブアプリで広告を有効にした場合）</h3>
@@ -252,6 +254,17 @@
                 ><strong>Microsoft</strong></a
               >: Windows版の配信（Microsoft Store）
             </li>
+            <li>
+              <a href="https://www.shopify.com/legal/privacy"
+                ><strong>Shopify</strong></a
+              >（Shopify Inc.）: 提携ショップ（NYAN
+              TCG）の価格・在庫の表示。購入時に開くショップのサイト（nyan-tcg.com）での情報の取扱いは、ショップおよびShopifyのポリシーに従います。
+            </li>
+            <li>
+              <a href="https://expo.dev/privacy"><strong>Expo</strong></a
+              >（650 Industries, Inc.。ネイティブアプリのみ）:
+              プッシュ通知の配信
+            </li>
           </ul>
           <p>
             当方は、個人情報を金銭の対価として販売しません。ただし、広告SDKは利用者の同意や端末設定に
@@ -262,7 +275,7 @@
 
           <h2>5. 外部送信（電気通信事業法に基づく公表）</h2>
           <p>
-            電気通信事業法第27条の12に基づき、利用状況の分析、不具合の把握および広告のために利用者の端末から第三者へ送信される利用者に関する情報、その送信先および利用目的を次のとおり公表します。
+            電気通信事業法第27条の12に基づき、利用状況の分析、不具合の把握、広告、提携ショップの価格・在庫の表示およびプッシュ通知の配信のために利用者の端末から第三者へ送信される利用者に関する情報、その送信先および利用目的を次のとおり公表します。
           </p>
 
           <h3>Google アナリティクス 4（Web版）</h3>
@@ -275,7 +288,7 @@
             <li>利用目的: 利用状況の分析による本サービスの改善</li>
             <li>
               送信の条件:
-              EEA・英国・スイスからのアクセスでは、同意バナーで許可した場合だけ送信します。それ以外の地域では既定で送信し、設定画面から停止できます。
+              EEA・英国・スイスからのアクセス（地域を判定できない場合を含みます）では、同意ダイアログで許可した場合だけ送信します。それ以外の地域では既定で送信し、設定画面の「アクセス解析とエラー送信」から停止できます。
             </li>
             <li>
               送信先のプライバシーポリシー:
@@ -295,7 +308,10 @@
             <li>
               利用目的: 不具合の検知と原因の調査による本サービスの安定運用
             </li>
-            <li>送信の条件: 予期しないエラーが発生した場合</li>
+            <li>
+              送信の条件:
+              予期しないエラーが発生した場合。EEA・英国・スイスからのアクセス（地域を判定できない場合を含みます）では、同意ダイアログで許可した場合だけ送信します。それ以外の地域では既定で送信し、設定画面の「アクセス解析とエラー送信」から停止できます（GA4と同じ設定です）。
+            </li>
             <li>
               送信先のプライバシーポリシー:
               <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
@@ -348,6 +364,47 @@
             </li>
           </ul>
 
+          <h3>NYAN TCG の価格・在庫（Shopify。ネイティブアプリ・Web版）</h3>
+          <ul>
+            <li>送信先: Shopify Inc.</li>
+            <li>
+              送信される情報:
+              問い合わせたカードの商品の識別子（セット記号と番号から作ったもの）、IPアドレス、ブラウザ・端末の種類など通信に伴う情報
+            </li>
+            <li>利用目的: 提携ショップ（NYAN TCG）の価格・在庫の表示</li>
+            <li>
+              送信の条件:
+              地域の設定が日本で、英語版のカードの詳細を開いた場合（ショップの商品と対応づけられるカードに限ります）。端末からShopifyのStorefront
+              API（q0drvd-z1.myshopify.com）へ問い合わせます。
+            </li>
+            <li>
+              購入するときは、ショップのサイト（nyan-tcg.com）をブラウザで開きます。そこでの情報の取扱いは、ショップおよびShopifyのポリシーに従います。
+            </li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://www.shopify.com/legal/privacy"
+                >Shopify Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h3>Expo のプッシュ通知（ネイティブアプリ）</h3>
+          <ul>
+            <li>送信先: 650 Industries, Inc.（Expo）</li>
+            <li>
+              送信される情報: プッシュ通知用の端末のトークン、アプリの識別子
+            </li>
+            <li>
+              利用目的:
+              プッシュ通知の配信（通知はExpoを経由して、Apple・Googleの配信基盤から届きます）
+            </li>
+            <li>送信の条件: 端末で通知を許可した場合</li>
+            <li>
+              送信先のプライバシーポリシー:
+              <a href="https://expo.dev/privacy">Expo Privacy Policy</a>
+            </li>
+          </ul>
+
           <h2>6. 保存期間と削除</h2>
           <p>
             アカウントおよび利用者が登録したデータは、原則としてアカウントが有効な間保存します。
@@ -369,13 +426,13 @@
               ブラウザ設定等から、Web版がブラウザ内に保存した情報（cookieを含みます）を削除できます。ただし、サーバー上のアカウントや同期済みデータは削除されません。
             </li>
             <li>
-              Web版の利用状況の分析（GA4）は、設定画面からいつでも無効にできます。EEA・英国・スイスからのアクセスでは、同意バナーで許可するまで無効です。ブラウザで利用する場合は、Googleが提供する<a
+              Web版の利用状況の分析（GA4）とエラー送信（Sentry）は、設定画面の「アクセス解析とエラー送信」からいつでも無効にでき、無効にすると両方とも止まります。EEA・英国・スイスからのアクセス（地域を判定できない場合を含みます）では、同意ダイアログで許可するまでどちらも送信しません。ブラウザで利用する場合は、Googleが提供する<a
                 href="https://tools.google.com/dlpage/gaoptout?hl=ja"
                 >Google アナリティクス オプトアウト アドオン</a
-              >でも無効にできます。
+              >でもGA4を無効にできます。
             </li>
             <li>
-              ブラウザのcookieやサイトデータを削除すると、利用状況の分析に関する選択も削除され、次回のアクセス時に地域に応じた初期の状態（同意バナーの表示または既定で有効）に戻ります。
+              ブラウザのcookieやサイトデータを削除すると、アクセス解析とエラー送信に関する選択も削除され、次回のアクセス時に地域に応じた初期の状態（同意ダイアログの表示、または両方とも既定で有効）に戻ります。
             </li>
             <li>
               広告同意画面および端末の広告設定から、広告に関する選択を変更できます。
@@ -420,7 +477,7 @@
 
           <h2>12. お問い合わせ</h2>
           <p>
-            PokeBuddy developer (Yamico)<br />
+            DesignCat Inc.<br />
             メール:
             <a href="mailto:kurohune538@gmail.com?subject=PokeBuddy%20privacy"
               >kurohune538@gmail.com</a
@@ -433,8 +490,8 @@
           <p>
             This Privacy Policy applies to the handling of information in the
             PokeBuddy iOS and Android apps, the browser-based web app, and the
-            Windows app (together, the “Services”), provided by PokeBuddy
-            developer (Yamico) (“we,” “us,” or “our”).
+            Windows app (together, the “Services”), provided by DesignCat Inc.
+            (“we,” “us,” or “our”).
           </p>
           <p>
             The Windows app is the browser-based web app (<a
@@ -526,8 +583,8 @@
               The web app stores sign-in sessions, the return path used after
               OAuth, preferences, cross-tab sign-out synchronization, caches
               used to display card data and other content more quickly, and your
-              analytics choice in browser storage such as local storage, session
-              storage, and IndexedDB.
+              analytics and error reporting choice in browser storage such as
+              local storage, session storage, and IndexedDB.
             </li>
             <li>
               When analytics is enabled, Google Analytics 4 stores identifiers
@@ -583,18 +640,20 @@
           <p>
             For access from the European Economic Area (EEA, including the EU
             member states), the United Kingdom, and Switzerland, GA4 is not
-            loaded until you allow it in the consent banner (opt-in). For access
-            from other regions, analytics is enabled by default and can be
-            turned off at any time in Settings (opt-out). If you have given
-            consent, you can also turn analytics off at any time in Settings.
-            Our server determines your region from your IP address; if the
-            region cannot be determined, we ask for your consent. Your choice is
-            stored in your browser’s localStorage. Events from actions you take
-            before you have made a choice (while your region is being determined
-            or the consent banner is shown) are held temporarily in memory on
-            your device, up to 30 events. They are sent if analytics becomes
-            enabled (you consent, or your region is determined not to require
-            consent) and are discarded without being sent if you decline.
+            loaded until you allow it in the consent dialog (opt-in). For access
+            from other regions, analytics is enabled by default (opt-out). GA4
+            and the Sentry error reporting described below follow a single
+            choice, the analytics and error reporting setting, which you can
+            change at any time in Settings in every region. Our server
+            determines your region from your IP address; if the region cannot be
+            determined, we ask for your consent, as we do for the EEA. Your
+            choice is stored in your browser’s localStorage. Events from actions
+            you take before you have made a choice (while your region is being
+            determined or the consent dialog is shown) are held temporarily in
+            memory on your device, up to 30 events. They are sent if analytics
+            becomes enabled (you consent, or your region is determined not to
+            require consent) and are discarded without being sent if you
+            decline.
           </p>
           <p>
             Information collected by GA4 is handled under Google’s Privacy
@@ -630,10 +689,16 @@
             addresses, search terms, deck names, and URL query values are
             removed or masked before sending, and IDs such as deck and match IDs
             (UUIDs) are replaced with placeholders. This reporting does not use
-            cookies, and Sentry is configured not to store IP addresses. Error
-            reporting is always on and does not ask for consent; it is based on
-            our legitimate interest in operating the Services reliably and
-            cannot be turned off in Settings.
+            cookies, and Sentry is configured not to store IP addresses.
+          </p>
+          <p>
+            Error reporting follows the same analytics and error reporting
+            setting as GA4. For access from the EEA, the United Kingdom, and
+            Switzerland (including when your region cannot be determined), no
+            error reports are sent until you allow it in the consent dialog. In
+            other regions, error reporting is enabled by default, and turning
+            the setting off in Settings stops sending to both GA4 and Sentry.
+            You can change the setting at any time.
           </p>
 
           <h3>
@@ -750,6 +815,20 @@
               >
               for distribution of the Windows app (Microsoft Store).
             </li>
+            <li>
+              <a href="https://www.shopify.com/legal/privacy"
+                ><strong>Shopify</strong></a
+              >
+              (Shopify Inc.) for displaying prices and stock from our partner
+              shop, NYAN TCG. When you buy, the shop’s website (nyan-tcg.com)
+              opens in your browser, and information there is handled under the
+              policies of the shop and Shopify.
+            </li>
+            <li>
+              <a href="https://expo.dev/privacy"><strong>Expo</strong></a> (650
+              Industries, Inc.; native apps only) for delivering push
+              notifications.
+            </li>
           </ul>
           <p>
             We do not sell personal information for monetary consideration.
@@ -768,8 +847,9 @@
             In accordance with Article 27-12 of Japan’s Telecommunications
             Business Act, we disclose below the information about users that is
             sent from users’ devices to third parties for usage analytics, error
-            monitoring, and advertising, together with the recipients and the
-            purposes of use.
+            monitoring, advertising, displaying prices and stock from a partner
+            shop, and delivering push notifications, together with the
+            recipients and the purposes of use.
           </p>
 
           <h3>Google Analytics 4 (web app)</h3>
@@ -785,8 +865,10 @@
             <li>Purpose: analyzing usage to improve the Services.</li>
             <li>
               When sent: for access from the EEA, the United Kingdom, and
-              Switzerland, only after you allow it in the consent banner. In
-              other regions, sent by default; you can stop it in Settings.
+              Switzerland (including when the region cannot be determined), only
+              after you allow it in the consent dialog. In other regions, sent
+              by default; you can stop it with the analytics and error reporting
+              setting in Settings.
             </li>
             <li>
               Recipient’s privacy policy:
@@ -811,7 +893,14 @@
               Purpose: detecting errors and investigating their causes to
               operate the Services reliably.
             </li>
-            <li>When sent: when an unexpected error occurs.</li>
+            <li>
+              When sent: when an unexpected error occurs. For access from the
+              EEA, the United Kingdom, and Switzerland (including when the
+              region cannot be determined), only after you allow it in the
+              consent dialog. In other regions, sent by default; you can stop it
+              with the analytics and error reporting setting in Settings (the
+              same setting as GA4).
+            </li>
             <li>
               Recipient’s privacy policy:
               <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>
@@ -872,6 +961,57 @@
             </li>
           </ul>
 
+          <h3>NYAN TCG prices and stock (Shopify; native apps and web app)</h3>
+          <ul>
+            <li>Recipient: Shopify Inc.</li>
+            <li>
+              Information sent: the product identifier of the card being looked
+              up (derived from the set code and card number), IP address,
+              browser or device type, and similar information sent as part of
+              the connection.
+            </li>
+            <li>
+              Purpose: displaying prices and stock from our partner shop, NYAN
+              TCG.
+            </li>
+            <li>
+              When sent: when your region setting is Japan and you open the
+              details of an English-version card (only for cards that can be
+              matched to a shop product). Your device queries Shopify’s
+              Storefront API (q0drvd-z1.myshopify.com).
+            </li>
+            <li>
+              When you buy, the shop’s website (nyan-tcg.com) opens in your
+              browser, and information there is handled under the policies of
+              the shop and Shopify.
+            </li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://www.shopify.com/legal/privacy"
+                >Shopify Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h3>Push notifications through Expo (native apps)</h3>
+          <ul>
+            <li>Recipient: 650 Industries, Inc. (Expo)</li>
+            <li>
+              Information sent: your device’s push notification token and the
+              app identifier.
+            </li>
+            <li>
+              Purpose: delivering push notifications (notifications are
+              delivered through Expo via Apple’s and Google’s delivery
+              infrastructure).
+            </li>
+            <li>When sent: when you allow notifications on your device.</li>
+            <li>
+              Recipient’s privacy policy:
+              <a href="https://expo.dev/privacy">Expo Privacy Policy</a>
+            </li>
+          </ul>
+
           <h2>6. Retention and Deletion</h2>
           <p>
             Account information and user-provided content are generally retained
@@ -902,10 +1042,13 @@
               delete your server-side account or synchronized data.
             </li>
             <li>
-              Turn off usage analytics (GA4) in the web app at any time in
-              Settings. For access from the EEA, the United Kingdom, and
-              Switzerland, analytics stays off until you allow it in the consent
-              banner. When using a browser, you can also turn it off with the
+              Turn off usage analytics (GA4) and error reporting (Sentry) in the
+              web app at any time with the analytics and error reporting setting
+              in Settings; turning it off stops both. For access from the EEA,
+              the United Kingdom, and Switzerland (including when your region
+              cannot be determined), neither is sent until you allow it in the
+              consent dialog. When using a browser, you can also turn off GA4
+              with the
               <a href="https://tools.google.com/dlpage/gaoptout"
                 >Google Analytics Opt-out Browser Add-on</a
               >
@@ -913,9 +1056,9 @@
             </li>
             <li>
               If you clear your browser’s cookies and site data, your analytics
-              choice is also cleared, and on your next visit the default for
-              your region applies again (the consent banner is shown, or
-              analytics is enabled by default).
+              and error reporting choice is also cleared, and on your next visit
+              the default for your region applies again (the consent dialog is
+              shown, or both are enabled by default).
             </li>
             <li>
               Manage advertising choices through the consent interface and
@@ -974,7 +1117,7 @@
 
           <h2>12. Contact</h2>
           <p>
-            PokeBuddy developer (Yamico)<br />
+            DesignCat Inc.<br />
             Email:
             <a href="mailto:kurohune538@gmail.com?subject=PokeBuddy%20privacy"
               >kurohune538@gmail.com</a
@@ -983,7 +1126,7 @@
         </section>
       </article>
 
-      <footer class="footer"><p>© 2026 PokeBuddy developer (Yamico)</p></footer>
+      <footer class="footer"><p>© 2026 DesignCat Inc.</p></footer>
     </main>
   </body>
 </html>
