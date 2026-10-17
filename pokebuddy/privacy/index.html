@@ -27,16 +27,16 @@
       <article class="document">
         <div class="meta">
           <span>制定日: 2026年7月28日</span>
-          <span>最終更新日: 2026年10月3日</span>
-          <span>運営者: PokeBuddy developer (Yamico)</span>
+          <span>最終更新日: 2026年10月17日</span>
+          <span>運営者: 株式会社DesignCat / DesignCat Inc.</span>
         </div>
 
         <section id="ja" class="language-section">
           <h2>1. 適用範囲</h2>
           <p>
-            本プライバシーポリシーは、PokeBuddy developer
-            (Yamico)（以下「当方」）が提供する
-            PokeBuddy（日本語表示名「ポケバディ」。以下「本アプリ」）における利用者情報の取扱いに適用されます。
+            本プライバシーポリシーは、株式会社DesignCat（以下「当方」）が提供する
+            PokeBuddy
+            のモバイル版・Web版・Windowsデスクトップ版（日本語表示名「ポケバディ」。以下「本アプリ」）における利用者情報の取扱いに適用されます。
           </p>
 
           <h2>2. 取得する情報</h2>
@@ -72,6 +72,9 @@
           </p>
 
           <h3>端末・診断情報</h3>
+          <p>
+            以下は、該当する機能やSDKを有効にしたプラットフォームに適用します。Web版・Windows版の違いは後述します。
+          </p>
           <ul>
             <li>端末モデル、OS、アプリのバージョン、言語、ネットワーク種別</li>
             <li>IPアドレスから推定される国・おおよその地域</li>
@@ -98,6 +101,26 @@
             画像設定など、利用者が該当機能を操作した場合にのみアクセスします。取り込み用画像は原則として
             端末内で処理されます。プロフィール画像等は、利用者が保存操作を行った場合に限りクラウドへ
             アップロードされることがあります。
+          </p>
+
+          <h3>Web版・Windows版の端末内保存と外部サービス</h3>
+          <p>
+            Web版とWindows版では、認証セッション、設定、同意状態、データや画像のキャッシュなどを、localStorage、sessionStorage、IndexedDBなどの端末内保存領域に保存します。必要に応じてcookieも使用します。Windows版はChromiumのアプリ専用保存領域を使い、通常のブラウザのデータとは別に保存します。ログインして同期するデータを除き、ブラウザの保存内容が自動移行されることはありません。
+          </p>
+          <p>
+            Windows版の現在のリリースでは、Google
+            Analytics（GA4）、Sentry、広告表示、PokeBuddyプラスの購入を無効にしています。Windows版はカメラ、マイク、位置情報、画面共有へのアクセスを許可しません。画像の取り込みでは利用者がファイルを選択します。保存を選択したプロフィール画像などはクラウドに送信される場合があります。
+          </p>
+          <p>
+            Web版でGA4やSentryが設定されている場合は、アプリの分析・診断の選択に従います。EU/EEA・英国・スイス、または地域を判定できない場合は許可されるまで送信を開始せず、その他の地域では設定から停止できます。GA4は利用イベント、画面名、ログイン時の内部ユーザーIDなどを扱い、広告目的の機能を無効にしています。SentryのWeb実装はエラーと診断情報を扱い、ユーザーIDを送信せず、URL・認証情報等を除去する処理を行い、性能トレースとセッションリプレイを無効にしています。Webページの配信にはVercelを利用します。
+          </p>
+          <h3>Windows版の更新と外部サイト</h3>
+          <p>
+            Windows版は、画面と処理に使うWeb資産の更新をSupabase上の専用配信先から取得できる仕組みを備えています。署名、互換性、サイズ、ハッシュを検証し、更新ファイルと更新状態を端末内に保存します。起動確認に失敗した場合に以前の資産または同梱資産へ戻すため、復旧用の資産も保持します。不要になった更新用ディレクトリは起動時の整理対象になります。更新確認・ダウンロードでは配信先に通常の通信情報（IPアドレス等）が伝わります。この更新取得に利用者のデッキや認証トークンを付加することはありません。Electron本体やネイティブ部分はこの仕組みの更新対象ではありません。
+          </p>
+          <p>
+            Windows版のGoogle・Appleログインは外部ブラウザを開き、認証結果をアプリに戻します。外部ブラウザ側のcookie等はそのブラウザで管理されます。対象地域・カードではNYAN
+            TCGの商品情報、在庫、価格、カートや購入リンクを表示し、購入・決済は外部ショップのShopifyチェックアウトで行います。外部サイトで入力する情報には、その事業者のプライバシーポリシーも適用されます。
           </p>
 
           <h2>3. 利用目的</h2>
@@ -153,13 +176,17 @@
             アカウントおよび利用者が登録したデータは、原則としてアカウントが有効な間保存します。
             削除依頼を確認後、法令上の保存義務、不正防止、紛争対応等に必要な情報を除き、関連データを
             原則30日以内に削除または匿名化します。バックアップおよび第三者サービス上のデータは、
-            各サービスの削除サイクルに従い、完全な消去まで最大180日程度を要する場合があります。
+            各サービスの削除サイクル、契約、セキュリティ上の必要性および法的義務に従って保持・削除されます。
           </p>
           <p>
             アプリのアンインストールやログアウトだけでは、サーバー上のアカウントは削除されません。
             手続きは
             <a href="/pokebuddy/delete-account/">アカウント削除ページ</a>
             をご覧ください。
+          </p>
+
+          <p>
+            端末内の保存内容やWindowsの更新キャッシュには一律の保存日数を設定していません。端末・ブラウザのアプリデータ削除機能等で消去できますが、未同期の内容やログイン状態も失われる場合があります。アカウント削除と端末内データの消去は別の操作です。
           </p>
 
           <h2>6. 利用者の選択と権利</h2>
@@ -208,10 +235,10 @@
 
           <h2>11. お問い合わせ</h2>
           <p>
-            PokeBuddy developer (Yamico)<br />
+            株式会社DesignCat / DesignCat Inc.<br />
             メール:
-            <a href="mailto:kurohune538@gmail.com?subject=PokeBuddy%20privacy"
-              >kurohune538@gmail.com</a
+            <a href="mailto:info@designcat.co?subject=PokeBuddy%20privacy"
+              >info@designcat.co</a
             >
           </p>
         </section>
@@ -219,9 +246,10 @@
         <section id="en" class="language-section" lang="en">
           <h2>1. Scope</h2>
           <p>
-            This Privacy Policy applies to the handling of information in
-            PokeBuddy (the “App”), provided by PokeBuddy developer (Yamico)
-            (“we,” “us,” or “our”).
+            This Privacy Policy applies to the handling of information in the
+            mobile, web, and Windows desktop versions of PokeBuddy (the “App”),
+            provided by 株式会社DesignCat / DesignCat Inc. (“we,” “us,” or
+            “our”).
           </p>
 
           <h2>2. Information We Collect</h2>
@@ -274,6 +302,10 @@
           </p>
 
           <h3>Device and diagnostic information</h3>
+          <p>
+            The following applies where the relevant feature or SDK is enabled.
+            Differences for web and Windows are described below.
+          </p>
           <ul>
             <li>
               Device model, operating system, app version, language, and network
@@ -310,6 +342,59 @@
             decks, or choosing an image. Import images are generally processed
             on your device. A profile image or similar content may be uploaded
             to cloud storage only after you choose to save it.
+          </p>
+
+          <h3>Local storage and services on web and Windows</h3>
+          <p>
+            The web and Windows versions store authentication sessions,
+            preferences, consent choices, and data or image caches in
+            localStorage, sessionStorage, IndexedDB, and other local storage.
+            Cookies may also be used where needed. Windows uses its own Chromium
+            application storage, separate from your regular browser.
+            Browser-local data is not automatically migrated; account data can
+            be synchronized after sign-in.
+          </p>
+          <p>
+            The current Windows release disables Google Analytics (GA4), Sentry,
+            advertising, and PokeBuddy Plus purchases. It does not permit
+            camera, microphone, location, or screen-capture access. You select
+            files when importing images. Profile images and similar content may
+            be uploaded when you choose to save them.
+          </p>
+          <p>
+            When GA4 or Sentry is configured for the web version, it follows the
+            App's analytics and diagnostic choices. Transmission does not begin
+            without permission in the EU/EEA, UK, Switzerland, or when the
+            region cannot be determined. In other regions, you can disable it in
+            Settings. GA4 processes usage events, screen names, and an internal
+            user ID when signed in; advertising features are disabled. The web
+            Sentry implementation processes errors and diagnostic information,
+            does not send user IDs, applies filtering to URLs and authentication
+            information, and disables performance tracing and session replay.
+            Vercel is used to host web pages.
+          </p>
+          <h3>Windows updates and external websites</h3>
+          <p>
+            Windows can retrieve updates to its interface and application logic
+            as web assets from a dedicated Supabase distribution endpoint. It
+            verifies signatures, compatibility, sizes, and hashes, and stores
+            update files and state locally. Recovery assets are also retained so
+            that a failed startup can fall back to an earlier or bundled
+            version. Unneeded update directories are eligible for cleanup on
+            startup. Update checks and downloads disclose ordinary network
+            information, such as an IP address, to the distribution service. The
+            updater does not attach your decks or authentication tokens to these
+            requests. This mechanism does not update Electron itself or native
+            components.
+          </p>
+          <p>
+            Google and Apple sign-in on Windows opens an external browser and
+            returns the authentication result to the App. That browser manages
+            its own cookies and storage. For eligible regions and cards, the App
+            shows NYAN TCG products, availability, prices, a cart, and purchase
+            links. Purchases and payment take place through the external shop's
+            Shopify checkout. Information you enter on external websites is also
+            subject to those providers' privacy policies.
           </p>
 
           <h2>3. How We Use Information</h2>
@@ -396,14 +481,22 @@
             request, we generally delete or de-identify associated data within
             30 days, except where retention is required for legal compliance,
             fraud prevention, or dispute resolution. Backups and
-            service-provider systems may take up to approximately 180 days to
-            complete their deletion cycles.
+            service-provider systems follow their respective deletion cycles,
+            contractual requirements, security needs, and legal obligations.
           </p>
           <p>
             Uninstalling the App or signing out does not delete server-side
             account data. See the
             <a href="/pokebuddy/delete-account/">Account Deletion page</a> to
             submit a request.
+          </p>
+
+          <p>
+            There is no single fixed retention period for local storage or the
+            Windows update cache. Device or browser app-data removal controls
+            can erase local data, but may also remove unsynchronized content and
+            sign-in state. Deleting an account and clearing local data are
+            separate operations.
           </p>
 
           <h2>6. Your Choices and Rights</h2>
@@ -468,16 +561,18 @@
 
           <h2>11. Contact</h2>
           <p>
-            PokeBuddy developer (Yamico)<br />
+            株式会社DesignCat / DesignCat Inc.<br />
             Email:
-            <a href="mailto:kurohune538@gmail.com?subject=PokeBuddy%20privacy"
-              >kurohune538@gmail.com</a
+            <a href="mailto:info@designcat.co?subject=PokeBuddy%20privacy"
+              >info@designcat.co</a
             >
           </p>
         </section>
       </article>
 
-      <footer class="footer"><p>© 2026 PokeBuddy developer (Yamico)</p></footer>
+      <footer class="footer">
+        <p>© 2026 株式会社DesignCat / DesignCat Inc.</p>
+      </footer>
     </main>
   </body>
 </html>
